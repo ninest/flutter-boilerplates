@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       ),
       home: MultiProvider(
         providers: [
-          Provider<Counter>(
+          ChangeNotifierProvider<Counter>(
             create: (_) => Counter(),
           )
         ],
