@@ -19,13 +19,20 @@ class HomePage extends StatelessWidget {
           style: Theme.of(context).textTheme.title,
         ),
         actions: <Widget>[
-          Switch(
-            value: false,
-            onChanged: (value) {
-              print('toggled! $value');
-              theme.toggleTheme();
+          IconButton(
+            icon: Icon(Icons.wb_sunny),
+            onPressed: () {
+              print('setting dark theme');
+              theme.setTheme('dark');
             },
-          )
+          ),
+          IconButton(
+            icon: Icon(Icons.surround_sound),
+            onPressed: () {
+              print('setting light theme');
+              theme.setTheme('light');
+            },
+          ),
         ],
       ),
       body: Center(
