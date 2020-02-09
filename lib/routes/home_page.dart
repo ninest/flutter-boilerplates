@@ -9,7 +9,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Provider.of<ThemeService>(context, listen: false);
     final counter = Provider.of<CounterService>(context, listen: false);
 
     return Scaffold(
@@ -23,14 +22,14 @@ class HomePage extends StatelessWidget {
             icon: Icon(Icons.wb_sunny),
             onPressed: () {
               print('setting dark theme');
-              theme.setTheme('dark');
+              ThemeService.setTheme('dark');
             },
           ),
           IconButton(
             icon: Icon(Icons.surround_sound),
             onPressed: () {
               print('setting light theme');
-              theme.setTheme('light');
+              ThemeService.setTheme('light');
             },
           ),
         ],
